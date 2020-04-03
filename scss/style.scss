@@ -1,0 +1,226 @@
+@import '_vars';
+@import '_global';
+
+//header start
+
+.header{
+
+    &__top{
+        background-color: $bg; 
+    }
+    &__top-inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 100px;
+    }
+    &__box{
+        display: flex;
+        align-items: center;
+        a{
+            color: #333333;
+            display: block;
+            line-height: 20px;
+            span{
+                color: $blue;
+            }
+        }
+        a.becomeSeller{
+            background-color: $blue;
+            color: #fff;
+            padding: 5px 15px;
+            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            font-size: 14px;
+            line-height: 28px;
+        }
+    }
+    &__avatar{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: 30px;
+    }
+    &__price{
+        margin-left: 20px;
+        font-weight: 500;
+        font-size: 16px;
+    }
+}
+.header__bottom-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+    font-size: 15px;
+}
+.menu{
+    &__list{
+        li{
+            display: inline-block;
+            & + li{
+                margin-left: 20px;
+            }
+            
+        }
+        a{
+            color: $grey;    
+            font-weight: 500;
+        }
+    }
+}
+.header__bottom-search{
+    min-width: 360px;
+    position: relative;
+    input{
+        max-width: 360px;
+        width: 100%;
+        display: block;
+        height: 45px; 
+        padding: 0 90px 0 25px;
+        border-radius: 25px;
+        border: 1px solid #d9dfe5;
+        outline: transparent;
+    }
+    button{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 70px;
+        background-color: $blue;
+        border-radius: 25px;
+        border: none;
+        cursor: pointer;
+        outline: transparent;
+    }
+}
+//header end
+
+//search start
+.search{
+    background-color: $darkBlue;
+    line-height: 15px;
+    &__desc{
+        text-align: center;
+        color: #fff;
+        padding: 170px 0 140px;
+        &-titlee{
+            font-size: 60px;
+            line-height: 70px;
+            span{
+                display: block;
+                font-weight: 700;
+                margin-bottom: 30px;
+            }
+        }
+        &-text{
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 60px;
+        }
+        a{
+            color: #fff;
+            margin: 0 15px;
+            font-size: 16px;
+            border: 1px solid #fff;
+            border-radius: 30px;
+            padding: 20px 30px;
+            transition: all .4s;
+            &:hover{
+                background-color: #fff;
+                color: $blue;
+            }
+        }
+        
+    }
+    &__form{
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 4px;
+        transform: translateY(50%);
+        position: relative;
+        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+        &::after{
+            content: ' ';
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.5);
+            top: -13px;
+            left: 15px;
+            right: 15px;
+            height: 13px;
+            border-radius: 4px 4px 0 0;
+        }
+        &::before{
+            content: ' ';
+            position: absolute;
+            z-index: 5;
+            background-color: rgba(255, 255, 255, 0.5);
+            top: -26px;
+            left: 30px;
+            right: 30px;
+            height: 26px;
+            border-radius: 4px 4px 0 0;
+        }
+        &-inner{
+            position: relative;
+            input{
+            max-width: 800px;
+            width: 100%;
+            height: 100%;
+            display: block;
+            height: 55px;
+            border: 1px solid #dcdcdc;
+            border-radius: 3px;
+            outline: transparent;
+            padding: 0 225px 0 30px;
+            }
+            button{
+                position: absolute;
+                top: 0;
+                right: 0;
+                color: #fff;
+                background-color: $blue;
+                border: none;
+                height: 100%;
+                padding: 0 65px;
+                cursor: pointer;
+                border-radius: 3px;
+                outline: transparent;
+            }
+        } 
+    }
+}
+//search end 
+
+//advantages start
+.advantages__items{
+    display: flex;
+    justify-content: space-between;
+    padding: 180px 0 120px;
+}
+.advantager__item{
+    padding: 40px 40px 50px;
+    text-align: center;
+    border-radius: 4px;
+    transition: all .4s;
+    &:hover{
+        background-color: #fff;
+        box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+    }
+    img{
+        margin-bottom: 30px;
+    }
+    &-title{
+        font-size: 24px;
+        color: #010101;
+        margin-bottom: 25px;
+    }
+}
+
+
+//advantages end
+
