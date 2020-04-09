@@ -9,6 +9,7 @@ html{
 a{
     display: inline-block;
     text-decoration: none;
+    outline: transparent;
 }
 ul,
 li{
@@ -27,4 +28,170 @@ body{
     max-width: 1170px;
     padding: 0 15px;
 }
-  
+.heading-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    height: 110px;
+    padding: 0 30px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+    margin-bottom: 50px;
+}
+.title{
+    font-size: 30px;
+    color: #000;
+}
+.heading{
+    font-size: 24px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 20px;
+}
+.item-title{
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.btn{
+    color: #fff;
+    background-color: $blue;
+    border: none;
+    cursor: pointer;
+    padding: 20px 30px;
+    border-radius: 50px;
+    display: block;
+    margin: 0 auto;
+    outline: transparent;
+}
+.avatar{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $purple;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    outline: transparent;
+}
+.user{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.user_name{
+    padding-left: 7px;
+    font-size: 15px;
+    color: #000;
+}  
+.user__product{
+        color: $purple;
+        padding-left: 45px;
+}
+.wordpress{
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        background-image: url(../images/icons/wordpress.svg);
+        width: 15px;
+        height: 15px;
+        left: 22px;
+        top: 8px;
+    }
+}
+.psd{
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        background-image: url(../images/icons/psd.svg);
+        width: 13px;
+        height: 17px;
+        left: 22px;
+        top: 8px;
+    }
+}
+.htmlicon{
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        background-image: url(../images/icons/html.png);
+        width: 15px;
+        height: 17px;
+        left: 22px;
+        top: 8px;
+    }
+}
+.likes{
+    position: relative;
+    padding-left: 20px;
+    padding-right: 15px;
+    margin-left: 14px;
+    font-size: 15px;
+    color: $text;
+    &::before{
+        content: '\e813';
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-family: 'Linearicons-Free';
+        color: $purple;
+    }
+}
+.sales{
+    position: relative;
+    padding-left: 20px;
+    margin-left: auto;
+    font-size: 15px;
+    color: $blue;
+    &::before{
+        content: '\e82e';
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-family: 'Linearicons-Free';
+    }
+}
+.price{
+    padding: 0 17px;
+    background-color: #e6f1fd;
+    color: $blue;
+    border-radius: 20px;
+}
+.notify{
+    &::before{
+        content: '\e858';
+        font-family: 'Linearicons-Free';
+        position: absolute;
+        top: 0;
+        right: 150px;
+        font-size: 20px;
+        color: #7e8fa1;
+    }
+}
+.message{
+    &::before{
+        content: '\e818';
+        font-family: 'Linearicons-Free';
+        position: absolute;
+        top: 0;
+        right: 100px;
+        font-size: 20px;
+        color: #7e8fa1;
+    }
+}
+.basket{
+    &::before{
+        content: '\e82e';
+        font-family: 'Linearicons-Free';
+        position: absolute;
+        top: 0;
+        right: 50px;
+        font-size: 20px;
+        color: #7e8fa1;
+    }
+}
