@@ -43,6 +43,21 @@ body{
     font-size: 30px;
     color: #000;
 }
+.subtitle{
+    text-align: center;
+    color: #000;
+    font-size: 36px;
+    margin-bottom: 30px;
+    span{
+        color: $blue;
+    }
+}
+.desc__subtitle{
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto ;
+    margin-bottom: 50px;
+}
 .heading{
     font-size: 24px;
     font-weight: 500;
