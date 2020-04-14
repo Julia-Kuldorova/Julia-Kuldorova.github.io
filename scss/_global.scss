@@ -75,11 +75,39 @@ body{
     background-color: $blue;
     border: none;
     cursor: pointer;
-    padding: 20px 30px;
+    padding: 22px 30px;
     border-radius: 50px;
     display: block;
     margin: 0 auto;
     outline: transparent;
+    width: 190px;
+    line-height: 0;
+}
+.searchForm{
+    min-width: 360px;
+    position: relative;
+    input{
+        max-width: 360px;
+        width: 100%;
+        display: block;
+        height: 45px; 
+        padding: 0 90px 0 25px;
+        border-radius: 25px;
+        border: 1px solid #d9dfe5;
+        outline: transparent;
+    }
+    button{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 70px;
+        background-color: $blue;
+        border-radius: 25px;
+        border: none;
+        cursor: pointer;
+        outline: transparent;
+    }
 }
 .avatar{
     width: 30px;
@@ -208,5 +236,50 @@ body{
         right: 50px;
         font-size: 20px;
         color: #7e8fa1;
+    }
+}
+.data{
+    position: relative;
+    margin-right: auto;
+    padding-left: 30px;
+    font-size: 15px;
+    color: #999999;
+    &::before{
+        content: '\e864';
+        font-family: 'Linearicons-Free';
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 20px;
+        color: $blue;
+    }
+}
+.views{
+    position: relative;
+    padding-left: 25px;
+    font-size: 15px;
+    color: #999999;
+    &::before{
+        content: '\e81b';
+        font-family: 'Linearicons-Free';
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 20px;
+    }
+}
+.comments{
+    position: relative;
+    padding-left: 25px;
+    padding-right: 15px;
+    font-size: 15px;
+    color: #999999;
+    &::before{
+        content: '\e83f';
+        font-family: 'Linearicons-Free';
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 20px;
     }
 }
