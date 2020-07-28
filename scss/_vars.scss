@@ -1,45 +1,14 @@
-$bg: #eef1f3;
-$bgDark: #eff1f5;
-$bgLight: #f6f7fb;
-$blue: #0674ec;
-$darkBlue: #2b4ed0;
-$purple: #7347c1;
-$grey: #333333;
-$text: #555555;
+$bg: #171744;
+$bgLight: #1c1c50;
+$bgItem: #202066;
+$purple: #4747c7;
+$wave: #05c3de;
+$textDark: #abb4ca;
+$text: #f3f2fd;
+$textPurple: #dde3ff;
 
-
-@mixin slider__prev {
-    top: -113px;
-    right: 96px;
-    left: auto;
-    position: absolute;
-    border: none;
-    color: #fff;
-    font-size: 14px;
-    background-color: transparent;
-    outline: transparent;
-    cursor: pointer;
-}
-@mixin slider__next {
-    top: -113px;
-    right: 45px;
-    position: absolute;
-    border: none;
-    color: #fff;
-    font-size: 14px;
-    background-color: transparent;
-    outline: transparent;
-    cursor: pointer;
-}
-
-@mixin category{
-    font-size: 15px;
-    color: #868c96;
-    background-color: #f1f3f6;
-    padding: 0px 15px;
-    border-radius: 15px;
-    border: none;
-    outline: transparent; 
-    cursor: pointer;
-    height: 30px;
+@mixin background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
