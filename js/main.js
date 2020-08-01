@@ -15,7 +15,22 @@ $(function(){
             '<button class="slick-arrow slick-prev"><img src="images/icons/arrow-prev.png" alt=""></button>',
         nextArrow:
             '<button class="slick-arrow slick-next"><img src="images/icons/arrow-next.png" alt=""></button>',
-        variableWidth: true
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 880,
+                settings: {
+                    slidesToShow: 2,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+        ]
     });
     $('.comments-slider__inner').slick({
         infinite: true,
@@ -40,22 +55,70 @@ $(function(){
         $(this).toggleClass('active');
     })
 
-    gsap.registerPlugin(ScrollTrigger);
-
-
-    let tl1 = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".advantages",
-            start: "center bottom"
-        }
+    $(".search__btn-top").on("click", function () {
+        $(this).closest('.header-top').children('.header-search').addClass("active");
     })
 
-    tl1.from(".advantages__info-box", { x: 100, opacity: 0, duration: 1.5})
+    $(".search-form__btn-close").on("click", function () {
+        $(".header-search").removeClass("active")
+    })
+
+    $(".header-top__btn-menu").on("click", function () {
+        $(".header-bottom").toggleClass("active")
+    })
+
+    $(".btn-contact__close").on("click", function () {
+        $(".btn-contact__close").addClass("hidden")
+        $(".contact__btn-wrapper").addClass("hidden")
+    })
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    ScrollTrigger.matchMedia({
+
+        "(min-width: 1000px)": function () {
+            let tl1 = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".advantages",
+                    start: "center bottom"
+                }
+            });
+            tl1.from(".advantages__info-box", { x: 100, opacity: 0, duration: 1.5})
+        },
+
+        "(max-width: 570px)": function () {
+            let tl4 = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".advantages__items-row-top",
+                     start: "top center"
+                }
+            });
+            tl4.from(".advantages__item-1", { x: -20,  opacity: 0,  duration: .05}, "-=1")
+            tl4.from(".advantages__item-2", { x: 20,  opacity: 0,  duration: .05})
+
+
+            let tl5 = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".advantages__items-row-right",
+                    start: "top center"
+                }
+            });
+            tl5.from(".advantages__item-3", { x: -20,  opacity: 0,  duration: .05}, "-=1")
+            tl5.from(".advantages__item-4", { x: 20,  opacity: 0,  duration: .05})
+
+        }
+
+    })
+
+
+
+
+
 
     let tl2  = gsap.timeline({
         scrollTrigger: {
             trigger: ".join",
-            start: "center bottom"
+            start: "center bottom",
         }
     })
 
