@@ -12,9 +12,9 @@ $(function(){
         slidesToShow: 3,
         slidesToScroll: 1,
         prevArrow:
-            '<button class="slick-arrow slick-prev"><img src="images/icons/arrow-prev.png" alt=""></button>',
+            '<button class="slick-arrow slick-prev"><img src="../images/icons/arrow-prev.png" alt=""></button>',
         nextArrow:
-            '<button class="slick-arrow slick-next"><img src="images/icons/arrow-next.png" alt=""></button>',
+            '<button class="slick-arrow slick-next"><img src="../images/icons/arrow-next.png" alt=""></button>',
         variableWidth: true,
         responsive: [
             {
@@ -37,9 +37,9 @@ $(function(){
         slidesToShow: 1,
         slidesToScroll: 1,
         prevArrow:
-            '<button class="slick-arrow slick-prev"><img src="../images/icons/arrow-prev.png" alt=""></button>',
+            '<button class="slick-arrow slick-prev" aria-label="Prev"><img src="../images/icons/arrow-prev.png" alt=""></button>',
         nextArrow:
-            '<button class="slick-arrow slick-next"><img src="../images/icons/arrow-next.png" alt=""></button>',
+            '<button class="slick-arrow slick-next" aria-label="Next"><img src="../images/icons/arrow-next.png" alt=""></button>',
         dots: true
     });
 

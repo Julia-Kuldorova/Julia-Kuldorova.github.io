@@ -1911,11 +1911,12 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    background-image: url("../images/background/background-footer.jpg");
+    background-image: url("../images/background/backgound-footer.png");
     @include background;
     z-index: -10;
     width: 100%;
     min-height: 666px;
+
   }
 }
 

@@ -47,6 +47,12 @@ h1, h2, h3 {
   padding: 0 15px;
 }
 
+.container-fluid{
+  margin: 0 auto;
+  max-width: 1935px;
+  padding: 0 15px;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
