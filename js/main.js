@@ -132,12 +132,6 @@ $(function(){
     })
 
 
-
-
-
-
-
-
     let tl3  = gsap.timeline({
         scrollTrigger: {
             trigger: ".comments",
