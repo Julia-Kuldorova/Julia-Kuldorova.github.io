@@ -39,8 +39,18 @@ $(function(){
         prevArrow:
             '<button class="slick-arrow slick-prev" aria-label="Prev"><img src="../images/icons/arrow-prev.png" alt=""></button>',
         nextArrow:
-            '<button class="slick-arrow slick-next" aria-label="Next"><img src="../images/icons/arrow-next.png" alt=""></button>',
+            '<button class="slick-arrow slick-next" aria-label="Nпгext"><img src="../images/icons/arrow-next.png" alt=""></button>',
         dots: true
+    });
+
+    $('.blog__aside-slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow:
+            '<button class="slick-arrow slick-prev" aria-label="Prev"><span class="icofont-thin-left"></span></button>',
+        nextArrow:
+            '<button class="slick-arrow slick-next" aria-label="Nпгext"><span class="icofont-thin-right"></span></button>'
     });
 
     $(".rate-star").rateYo({
@@ -84,29 +94,40 @@ $(function(){
                 }
             });
             tl1.from(".advantages__info-box", { x: 100, opacity: 0, duration: 1.5})
+
+            let tl2  = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".join",
+                    start: "center bottom",
+                }
+            })
+
+            tl2.from(".join__aside", { x: -100, opacity: 0, duration: 1.5})
+                .from(".join__box-bottom-wrapper",{ y: 100, opacity: 0, duration: 1.5} )
         },
 
-        "(max-width: 570px)": function () {
-            let tl4 = gsap.timeline({
-                scrollTrigger: {
-                    trigger: ".advantages__items-row-top",
-                     start: "top center"
-                }
-            });
-            tl4.from(".advantages__item-1", { x: -20,  opacity: 0,  duration: .05}, "-=1")
-            tl4.from(".advantages__item-2", { x: 20,  opacity: 0,  duration: .05})
 
-
-            let tl5 = gsap.timeline({
-                scrollTrigger: {
-                    trigger: ".advantages__items-row-right",
-                    start: "top center"
-                }
-            });
-            tl5.from(".advantages__item-3", { x: -20,  opacity: 0,  duration: .05}, "-=1")
-            tl5.from(".advantages__item-4", { x: 20,  opacity: 0,  duration: .05})
-
-        }
+        // "(max-width: 570px)": function () {
+        //     let tl4 = gsap.timeline({
+        //         scrollTrigger: {
+        //             trigger: ".advantages__items-row-top",
+        //              start: "top center"
+        //         }
+        //     });
+        //     tl4.from(".advantages__item-1", { x: -20,  opacity: 0,  duration: .05}, "-=1")
+        //     tl4.from(".advantages__item-2", { x: 20,  opacity: 0,  duration: .05})
+        //
+        //
+        //     let tl5 = gsap.timeline({
+        //         scrollTrigger: {
+        //             trigger: ".advantages__items-row-right",
+        //             start: "top center"
+        //         }
+        //     });
+        //     tl5.from(".advantages__item-3", { x: -20,  opacity: 0,  duration: .05}, "-=1")
+        //     tl5.from(".advantages__item-4", { x: 20,  opacity: 0,  duration: .05})
+        //
+        // }
 
     })
 
@@ -115,15 +136,7 @@ $(function(){
 
 
 
-    let tl2  = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".join",
-            start: "center bottom",
-        }
-    })
 
-    tl2.from(".join__aside", { x: -100, opacity: 0, duration: 1.5})
-        .from(".join__box-bottom-wrapper",{ y: 100, opacity: 0, duration: 1.5} )
 
     let tl3  = gsap.timeline({
         scrollTrigger: {

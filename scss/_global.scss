@@ -41,6 +41,7 @@ h1, h2, h3 {
   font-weight: 400;
 }
 
+
 .container {
   margin: 0 auto;
   max-width: 1140px;
@@ -388,6 +389,139 @@ h1, h2, h3 {
     margin-top: 1px;
   }
 
+}
+
+.breadcrumbs{
+  text-align: center;
+  .breadcrumbs__inner{
+    padding: 150px 0;
+  }
+  .breadcrumbs__title{
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .breadcrumbs__list{
+    li{
+      display: inline-block;
+      a, span{
+        color: #d0dbff;
+        font-size: 20px;
+        line-height: 30px;
+      }
+
+    }
+    li + li{
+      position: relative;
+      padding-left: 22px;
+      &:before{
+        content: ' ';
+        width: 6px;
+        height: 12px;
+        background-image: url("../images/icons/right-arrow.png");
+        position: absolute;
+        left: 6px;
+        top: 10px;
+      }
+    }
+  }
+}
+
+.social__links-gradient.social__links{
+  li{
+    a{
+      width: 40px;
+      height: 40px;
+      position: relative;
+      &::before{
+        content: ' ';
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        border-radius: 50%;
+        background: linear-gradient( -210deg, rgb(193,101,221) 0%, rgb(92,39,254) 100%);
+        box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: .3s all;
+      }
+      span{
+        &:before{
+          position: absolute;
+          top: 10px;
+          left: 11px;
+        }
+      }
+    }
+    &:hover {
+      span {
+        color: #fff;
+      }
+      a{
+        &::before{
+          opacity: 1;
+        }
+      }
+    }
+  }
+  li+li {
+    margin-left: 10px;
+  }
+}
+
+.pagination{
+  display: flex;
+}
+
+.pagination-button{
+  cursor: pointer;
+  background: transparent;
+  outline: transparent;
+  color: #7a89bb;
+  border: none;
+  transition: .3s all;
+  &:hover{
+    color: #fff;
+  }
+}
+
+.pagination__list{
+  margin: 0 40px;
+  display: flex;
+  a{
+    color: #bac6ec;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    position: relative;
+    transition: .3s all;
+    &:before{
+      content: ' ';
+      position: absolute;
+      width: 42px;
+      left: 0;
+      top: 0;
+      height: 42px;
+      border-radius: 50%;
+      background-image: linear-gradient( -30deg, rgb(193,101,221) 0%, rgb(92,39,254) 100%);
+      box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+      z-index: -1;
+      opacity: 0;
+      transition: .3s all;
+    }
+    &:hover{
+      &:before{
+        opacity: 1;
+      }
+      color: #fff;
+    }
+  }
 }
 
 
